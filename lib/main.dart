@@ -25,43 +25,40 @@ body:Center(
   child: Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
-      TextField(
-        style: TextStyle(
-          color:Colors.white,fontSize: 20,),
-        decoration: InputDecoration(
-          fillColor: Colors.blue,
-          filled: true,
-          hintText:'Phone Number',
-          hintStyle:TextStyle(color: Colors.white),
-          suffixIcon: Icon(Icons.add_call,size: 30,),
-           label: Text('Enter Number'),
-          labelStyle: TextStyle(color: Colors.white)
+      Container(
+        width: 200,
+        height: 100,
 
-
+        child: Text('HOME'),
+        alignment: Alignment.center,
+        margin: EdgeInsets.all(16),
+        padding: EdgeInsets.all(10),
+        decoration:BoxDecoration(
+          color: Colors.lightBlueAccent,
+          border: Border.all(color: Colors.black,width:2),
+          borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomRight: Radius.circular(20)),
         ),
-      ),
-      SizedBox(
-        height: 5,
-        width: 10,
-      ),
-      TextField(
-        obscureText: true,
-        style: TextStyle(
 
-          color:Colors.white,fontSize: 20,),
-        decoration: InputDecoration(
-            fillColor: Colors.blue,
-            filled: true,
-            hintText:'password',
-            hintStyle:TextStyle(color: Colors.white),
-            suffixIcon: Icon(Icons.password,size: 30,),
-            label: Text('Enter Password'),
-            labelStyle: TextStyle(color: Colors.white,
-            ),
-              border: OutlineInputBorder(),
-          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.purple))
 
+      ),
+      Container(
+        child: ElevatedButton(
+
+          
+          style: ElevatedButton.styleFrom(
+
+
+            textStyle: TextStyle(fontSize:60, ),backgroundColor: Colors.cyan,
+            foregroundColor: Colors.black,
+            padding: EdgeInsets.all(10),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50))
+          ),
+          
+          onPressed: () {print('Money send');  },child: Text('Send'),
+        
+        
         ),
+
 
       ),
 
